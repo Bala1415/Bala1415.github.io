@@ -1,0 +1,61 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI powered Legal Chatbot",
+      "description": "AI-powered legal assistant project with 3D avatar. Designed an AI-powered legal assistant integrating a 3D avatar and LLM for real-time legal resolution. Combined NLP, legal data processing, and immersive UI to enhance user experience and accessibility in legal tech.",
+      "technologies": [
+        "Python",
+        "NLP",
+        "LLM",
+        "3D Avatar",
+        "Legal Data Processing"
+      ],
+      "category": "ai",
+      "image": "./assets/projects/legal-chatbot.png",
+      "githubUrl": "https://github.com/Bala1415/LLM-Legal-bot-main",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "Altuno AI Finance Management App",
+      "description": "A cross-platform app that helps students track income & expenses with smart insights. Built using React Native + Firebase for real-time data sync. Designed a clean, user-friendly interface tailored for student needs. Implemented features like expense categorization and monthly analytics.",
+      "technologies": [
+        "React Native",
+        "Firebase",
+        "JavaScript",
+        "Mobile Development"
+      ],
+      "category": "web",
+      "image": "./assets/projects/altuno-finance.png",
+      "githubUrl": "https://github.com/Bala1415/AltunoExpo",
+      "featured": true
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": "All",
+      "icon": "fa-solid fa-diagram-project",
+      "visible": true
+    },
+    {
+      "id": "web",
+      "name": "Web Dev",
+      "icon": "fa-solid fa-globe",
+      "visible": true
+    },
+    {
+      "id": "ai",
+      "name": "AI/ML",
+      "icon": "fa-solid fa-brain",
+      "visible": true
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "icon": "fa-solid fa-robot",
+      "visible": false
+    }
+  ]
+}
