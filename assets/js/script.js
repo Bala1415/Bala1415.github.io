@@ -97,8 +97,8 @@ class PortfolioApp {
     this.renderFilterButtons();
     this.renderProjects();
 
-    // Initialize EmailJS
-    this.initializeEmailJS();
+    // Initialize contact form handler
+    this.initContactForm();
   }
 
   setupEventListeners() {
@@ -142,7 +142,7 @@ class PortfolioApp {
       }
     });
 
-    // Contact form - handled by FormSubmit.co (no custom JavaScript needed)
+    // Contact form handled in initContactForm method
 
 
     // Scroll events
@@ -1149,17 +1149,84 @@ class PortfolioApp {
             });
     }
 
-    // Initialize email handler
-    initializeEmailJS() {
-        // Using FormSubmit.co - no initialization needed, form submits directly
-        console.log('Using FormSubmit.co for contact form submission');
+    // Contact Form Handler for Netlify Functions
+    initContactForm() {
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+        const btnIcon = document.getElementById('btnIcon');
         
-        // Remove the default form handler since FormSubmit handles it
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            // FormSubmit.co will handle the submission natively
-            console.log('Contact form ready - will submit to FormSubmit.co');
-        }
+        if (!form) return;
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value.trim(),
+                email: document.getElementById('email').value.trim(),
+                subject: document.getElementById('subject').value.trim(),
+                message: document.getElementById('message').value.trim()
+            };
+            
+            // Validate fields
+            if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+                this.showFormNotification('Please fill in all fields', 'error');
+                return;
+            }
+            
+            // Disable form during submission
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = '0.7';
+            submitBtn.style.cursor = 'not-allowed';
+            btnText.textContent = 'Sending...';
+            btnIcon.className = 'fas fa-spinner fa-spin';
+            
+            try {
+                // Submit to Netlify Function
+                const response = await fetch('/.netlify/functions/sendEmail', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
+                    // Success
+                    this.showFormNotification(result.message || 'Message sent successfully!', 'success');
+                    form.reset();
+                } else {
+                    // Error from server
+                    this.showFormNotification(result.message || 'Failed to send message. Please try again.', 'error');
+                }
+            } catch (error) {
+                console.error('Form submission error:', error);
+                this.showFormNotification('An error occurred. Please try again or contact me directly via email.', 'error');
+            } finally {
+                // Re-enable form
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = '1';
+                submitBtn.style.cursor = 'pointer';
+                btnText.textContent = 'Send Message';
+                btnIcon.className = 'fas fa-paper-plane';
+            }
+        });
+    }
+    
+    showFormNotification(message, type) {
+        const notification = document.getElementById('formNotification');
+        if (!notification) return;
+        
+        notification.textContent = message;
+        notification.className = `form-notification ${type} show`;
+        
+        // Auto-hide after 5 seconds
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, 5000);
     }
 
     showNotification(message, type = "info") {

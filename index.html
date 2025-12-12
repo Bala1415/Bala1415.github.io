@@ -585,27 +585,24 @@
                 </div>
 
                 <form class="contact-form scroll-reveal-right scroll-stagger-2 glow-border" id="contactForm">
-                    <!-- Web3Forms Configuration -->
-                    <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                    <input type="hidden" name="subject" value="New Contact from Portfolio">
-                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
-                    
                     <div class="form-group scroll-reveal scroll-stagger-3">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="text" name="name" id="name" placeholder="Your Name" required>
                     </div>
                     <div class="form-group scroll-reveal scroll-stagger-4">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group scroll-reveal scroll-stagger-5">
-                        <input type="text" name="subject" placeholder="Subject" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group scroll-reveal scroll-stagger-6">
-                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                        <textarea name="message" id="message" placeholder="Your Message" rows="6" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary scroll-reveal-scale scroll-stagger-6">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
+                    <button type="submit" class="btn btn-primary scroll-reveal-scale scroll-stagger-6" id="submitBtn">
+                        <span id="btnText">Send Message</span>
+                        <i class="fas fa-paper-plane" id="btnIcon"></i>
                     </button>
+                    <!-- Notification area -->
+                    <div id="formNotification" class="form-notification"></div>
                 </form>
             </div>
         </div>
