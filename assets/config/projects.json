@@ -1,0 +1,106 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "SiteSense — Intelligent Web Navigation",
+      "subtitle": "RAG-Powered Conversational Discovery & Autonomous Routing",
+      "date": "January 2026",
+      "problem": "Navigating information-dense web portals is often tedious, resulting in user drop-off when searching across deep hierarchical documentation and pages.",
+      "solution": "Built an intelligent RAG-based AI assistant that semantically parses website content, answers queries in real time, and automatically routes users directly to the precise target destination.",
+      "description": "RAG-based AI system engineered for intelligent website querying, vector search, semantic retrieval, and autonomous page redirection to streamline information discovery.",
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "RAG",
+        "LLMs",
+        "Vector Search",
+        "Semantic Retrieval"
+      ],
+      "capabilities": [
+        "Vector embedding & semantic indexing of web content",
+        "Contextual query resolution with low-latency LLM pipeline",
+        "Intelligent multi-page navigation and autonomous redirection",
+        "Clean conversational interface with direct citation links"
+      ],
+      "category": "ai",
+      "image": "./assets/projects/legal-chatbot.png",
+      "githubUrl": "https://github.com/Bala1415",
+      "featured": true,
+      "featuredBadge": "Key Project • Jan 2026"
+    },
+    {
+      "id": 2,
+      "title": "Altuno — AI Finance Management App",
+      "subtitle": "Cross-Platform Smart Expense Analytics for Students",
+      "date": "November 2025",
+      "problem": "Students struggle with financial literacy and manual expense tracking due to fragmented apps that lack automated categorization and actionable spending telemetry.",
+      "solution": "Architected a responsive cross-platform mobile application powered by React Native and Firebase that offers real-time cloud data sync, automated expense categorization, and monthly analytics.",
+      "description": "Cross-platform mobile application built using React Native and Firebase for real-time synchronization, intelligent expense categorization, income tracking, and monthly financial analytics tailored for student users.",
+      "technologies": [
+        "React Native",
+        "Firebase",
+        "JavaScript",
+        "Real-Time Sync",
+        "Mobile Development"
+      ],
+      "capabilities": [
+        "Real-time bi-directional cloud data synchronization via Firebase",
+        "Automated expense categorization and monthly budget telemetry",
+        "Multi-device transaction logging and instant income tracking",
+        "Mobile-first responsive architecture designed for student usability"
+      ],
+      "category": "mobile",
+      "image": "./assets/projects/altuno-finance.png",
+      "githubUrl": "https://github.com/Bala1415/AltunoExpo",
+      "featured": true,
+      "featuredBadge": "Key Project • Nov 2025"
+    },
+    {
+      "id": 3,
+      "title": "AI Powered Legal Chatbot",
+      "subtitle": "Interactive Legal Assistant with 3D Avatar & LLM Reasoning",
+      "date": "2025",
+      "problem": "Legal jargon and statutory research are inaccessible and overwhelming for non-lawyers seeking immediate guidance on rights and regulations.",
+      "solution": "Engineered an AI-powered legal assistant combining an interactive 3D avatar with large language model reasoning and specialized legal document processing for intuitive real-time advisory.",
+      "description": "AI-powered legal assistant project with 3D avatar. Designed an AI-powered legal assistant integrating a 3D avatar and LLM for real-time legal resolution. Combined NLP, legal data processing, and immersive UI to enhance accessibility in legal tech.",
+      "technologies": [
+        "Python",
+        "NLP",
+        "LLMs",
+        "3D Avatar",
+        "Legal Data Processing"
+      ],
+      "capabilities": [
+        "NLP-driven statutory reasoning and query interpretation",
+        "Interactive 3D avatar UI for conversational legal consultation",
+        "Structured parsing and indexing of legal statutes",
+        "Real-time conversational streaming and query assistance"
+      ],
+      "category": "ai",
+      "image": "./assets/projects/legal-chatbot.png",
+      "githubUrl": "https://github.com/Bala1415/LLM-Legal-bot-main",
+      "featured": false,
+      "featuredBadge": "NLP & AI System"
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": "All Projects",
+      "icon": "fa-solid fa-layer-group",
+      "visible": true
+    },
+    {
+      "id": "ai",
+      "name": "AI & Agents",
+      "icon": "fa-solid fa-brain",
+      "visible": true
+    },
+    {
+      "id": "mobile",
+      "name": "Mobile & Apps",
+      "icon": "fa-solid fa-mobile-screen",
+      "visible": true
+    }
+  ]
+}

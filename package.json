@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-balavignesh",
+  "version": "1.0.0",
+  "description": "Personal portfolio website with Netlify Functions contact form",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.10.1"
+  },
+  "keywords": [
+    "portfolio",
+    "netlify",
+    "serverless"
+  ],
+  "author": "Balavignesh A U",
+  "license": "MIT"
+}

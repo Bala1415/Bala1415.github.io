@@ -1,0 +1,51 @@
+{
+    "profile": {
+        "name": "Balavignesh A U",
+        "tagline": "Full-Stack Engineer | AI Engineer",
+        "location": "Chennai, India",
+        "bannerImage": "../ele/card_banner.png",
+        "profileImage": "../ele/profile_pic.png",
+        "themeColor": "#8b5cf6"
+    },
+    "skills": [
+        "Full-Stack Developer",
+        "AI Engineer"
+    ],
+    "socialLinks": [
+        {
+            "platform": "LinkedIn",
+            "url": "https://linkedin.com/in/balavignesh1010",
+            "icon": "linkedin",
+            "tooltip": "LinkedIn"
+        },
+        {
+            "platform": "GitHub",
+            "url": "https://github.com/Bala1415",
+            "icon": "github",
+            "tooltip": "GitHub"
+        },
+        {
+            "platform": "Email",
+            "url": "mailto:aubalavignesh1010@gmail.com",
+            "icon": "email",
+            "tooltip": "Email"
+        }
+    ],
+    "footer": {
+        "text": "Made by Balavignesh",
+        "url": "https://Bala1415.github.io",
+        "showHeart": true
+    },
+    "animations": {
+        "enableHover3D": true,
+        "enableRippleEffect": true,
+        "enableParallax": true
+    },
+    "customization": {
+        "cardWidth": "430px",
+        "cardBorderRadius": "24px",
+        "glowIntensity": "20px",
+        "backgroundType": "solid",
+        "backgroundColor": "#000000"
+    }
+}
